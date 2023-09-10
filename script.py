@@ -4,6 +4,7 @@ import string
 import datetime
 
 IsFolderPath = True  # Set to True if you want to use the script's directory as the target folder
+FolderPath = "/path/to/your/directory" # Will NOT work if IsFolderPath is set to False.
 
 blacklist = {
     "blacklisted_name1": "replacement1",
@@ -17,7 +18,7 @@ whitelist = {
 if IsFolderPath:
     directory = os.path.dirname(os.path.abspath(__file__))
 else:
-    directory = "/path/to/your/directory"
+    directory = FolderPath
 
 log_directory = os.path.join(directory, "log")
 os.makedirs(log_directory, exist_ok=True)
