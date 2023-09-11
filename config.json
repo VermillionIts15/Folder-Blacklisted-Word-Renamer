@@ -7,5 +7,6 @@
         "file_to_keep1": "file_to_keep1"
     },
     "IsFolderPath": true,
-    "folder_path": "/path/to/your/directory"
+    "folder_path": "/path/to/your/directory",
+    "create_backup": true
 }
