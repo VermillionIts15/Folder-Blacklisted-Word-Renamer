@@ -13,8 +13,9 @@ This Python script allows you to perform mass renaming of files in a directory b
      - `"whitelist"`: A dictionary of files that should not be altered during renaming.
      - `"IsFolderPath"`: A boolean toggle. If `true`, the script will use the folder path specified in `"folder_path"`; if `false`, it will use its own directory as the target folder.
      - `"folder_path"`: The path to the directory containing the files to be renamed. This is used only when `"IsFolderPath"` is `true`.
+     - `"create_backup"`: A boolean toggle. If `true`, the script will create a backup of original files before renaming.
    
-   - Modify the `config.json` file to customize the blacklist, whitelist, folder path, and other settings.
+   - Modify the `config.json` file to customize the blacklist, whitelist, folder path, backup settings, and other options.
 
 2. **Renaming Files**
 
@@ -60,20 +61,22 @@ This Python script allows you to perform mass renaming of files in a directory b
         "file_to_keep1": "file_to_keep1"
     },
     "IsFolderPath": true,
-    "folder_path": "/path/to/your/directory"
+    "folder_path": "/path/to/your/directory",
+    "create_backup": true
 }
 ```
 
-Replace the values in `"blacklist"`, `"whitelist"`, `"IsFolderPath"`, and `"folder_path"` with your desired configuration.
+Replace the values in `"blacklist"`, `"whitelist"`, `"IsFolderPath"`, `"folder_path"`, and `"create_backup"` with your desired configuration.
 
 ## Notes
-
 - Always make backups of your files before running the script to avoid data loss.
 
-- Review the `log` files in the log folder to track changes made by the script.
+- Review the log files in the log folder to track changes made by the script.
 
 - It should be easy to do modifications to the code.
 
-- Before opening an issue make sure you got the logs or anything to help mitigate the source of the error.
+- Before opening an issue, make sure you have the logs or anything to help identify the source of the error.
 
-I did this for no reason, but this should help some people as I was also having problems. Happy file renaming I guess!
+- I added a new feature that allows you to create backups of your original files, enhancing file renaming safety. (Someone had a problem so I think this could help anyone in the near future.)
+
+### Version: 0.7 - "Backup"
